@@ -58,4 +58,4 @@ $route['Source/do/Login/doLogin'] = 'Login/doLogin';
 $route['Source/do/Login/doLogout'] = 'Login/doLogout';
 
 /* Admin page */
-//$route['Module'] = 'Login/doLogin';
+$route['Source/do/(:any)'] = 'Action/$1';

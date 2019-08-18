@@ -99,6 +99,13 @@
           <span>Mobil</span></a>
       </li>
 
+      <!-- Jenis Mobil -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('Module/JenisMobil/') ?>">
+          <i class="fas fa-fw fa-car-side"></i>
+          <span>Jenis Mobil</span></a>
+      </li>
+
       <!-- Pelanggan -->
       <li class="nav-item">
         <a class="nav-link" href="<?= base_url('Module/Pelanggan/') ?>">
