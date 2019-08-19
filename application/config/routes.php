@@ -54,8 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 /* Login Routes */
-$route['Source/do/Login/doLogin'] = 'Login/doLogin';
-$route['Source/do/Login/doLogout'] = 'Login/doLogout';
+$route['Source/do/Login/(:any)'] = 'Login/$1';
 
 /* Admin page */
 $route['Source/do/(:any)'] = 'Action/$1';

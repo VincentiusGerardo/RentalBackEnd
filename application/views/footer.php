@@ -46,7 +46,7 @@
       </div>
     </div>
   </div>
-  <!-- Change Password -->
+  <!-- Change Password --> 
   <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -57,7 +57,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="<?= base_url('Admin/Source/do/ChangePassword') ?>" method="post" enctype="multipart/form-data">
+          <form action="<?= base_url('Source/do/Login/doChangePassword') ?>" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= $this->session->userdata('username') ?>">
             <div class="form-group">
               <label for="">Current Password</label>
