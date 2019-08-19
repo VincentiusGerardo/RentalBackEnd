@@ -28,11 +28,11 @@ $(function(){
     <?php $i = 1; foreach($jenis as $j){ ?>
     <tr>
         <td><?= $i ?></td>
-        <td><?= $j->Jenis ?></td>
+        <td><?= $j->JenisMobil ?></td>
         <td>
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalEdit<?= $j->ID_JenisMobil; ?>" data-toggle="tooltip" title="Edit <?= $j->Jenis ?>"><i class='fa fa-edit'></i></button>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalEdit<?= $j->ID_JenisMobil; ?>" data-toggle="tooltip" title="Edit <?= $j->JenisMobil ?>"><i class='fa fa-edit'></i></button>
             &nbsp;
-            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete<?= $j->ID_JenisMobil; ?>" data-toggle="tooltip" title="Delete <?= $j->Jenis ?>"><i class='fa fa-trash'></i></button>
+            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDelete<?= $j->ID_JenisMobil; ?>" data-toggle="tooltip" title="Delete <?= $j->JenisMobil ?>"><i class='fa fa-trash'></i></button>
       </td>
     </tr>
     <?php $i++; } ?>

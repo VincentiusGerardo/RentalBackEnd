@@ -23,6 +23,7 @@
 
         public function mobil(){
             $data['mobil'] = $this->mAdmin->getDataMobil();
+            $data['jenis'] = $this->mAdmin->getDataJenisMobil();
             $this->getHeader();
             $this->load->view('v_mobil',$data);
             $this->load->view('modal/modal_mobil',$data);
@@ -30,14 +31,17 @@
         }
 
         public function pelanggan(){
+            $data['pelanggan'] = $this->mAdmin->getDataPelanggan();
             $this->getHeader();
-            $this->load->view('v_pelanggan');
+            $this->load->view('v_pelanggan',$data);
             $this->load->view('footer');
         }
 
         public function transaksi(){
+            $data['transaksi'] = $this->mAdmin->getDataTransaksi();
             $this->getHeader();
-            $this->load->view('v_transaksi');
+            $this->load->view('v_transaksi',$data);
+            $this->load->view('modal/modal_transaksi',$data);
             $this->load->view('footer');
         }
 

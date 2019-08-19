@@ -36,7 +36,7 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Edit <?= $j->Jenis ?></h4>
+        <h4 class="modal-title">Edit <?= $j->JenisMobil ?></h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
@@ -46,7 +46,7 @@
       <input type="hidden" name="ide" value="<?= $j->ID_JenisMobil ?>">
         <div class="form-group">
         <label for="">Jenis Mobil</label>
-        <input type="text" class="form-control" name="jenisMe" value="<?= $j->Jenis ?>">
+        <input type="text" class="form-control" name="jenisMe" value="<?= $j->JenisMobil ?>">
         </div>
       </div>
 
@@ -68,7 +68,7 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Add Jenis Mobil</h4>
+        <h4 class="modal-title">Delete <?= $j->JenisMobil ?></h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 

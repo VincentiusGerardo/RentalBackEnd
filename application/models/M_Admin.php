@@ -16,7 +16,12 @@
         }
 
         public function getDataMobil(){
-            $q = $this->db->get_where('ms_mobil', array('FlagActive' => 'Y'));
+            $this->db->select('a.*, b.JenisMobil');
+            $this->db->from('ms_mobil a');
+            $this->db->join('ms_jenismobil b', 'a.ID_JenisMobil = b.ID_JenisMobil','inner');
+            $this->db->where('a.FlagActive','Y');
+            $this->db->order_by('a.ID_Mobil', 'ASC');
+            $q = $this->db->get();
             return $q->result();
         }
 
@@ -26,7 +31,7 @@
         }
 
         public function getDataTransaksi(){
-            $q = $this->db->get('tr_rental');
+            $q = $this->db->query('select a.*,b.NamaPelanggan, c.NamaMobil from tr_rental a, ms_pelanggan b, ms_mobil c where a.ID_Pelanggan = b.ID_Pelanggan and a.ID_Mobil = c.ID_Mobil order by a.ID_Rental asc ');
             return $q->result();
         }
 
@@ -36,6 +41,17 @@
         }
 
         /* Mobil */
+
+        public function getIDMobil(){
+            $this->db->select('ID_Mobil');
+            $this->db->order_by('ID_Mobil','DESC');
+            $this->db->limit(1);
+            $q = $this->db->get('ms_mobil');
+            if($q->num_rows() > 0){
+                $num = $q->row();
+                return $num->ID_Mobil;
+            }
+        }
 
         public function addMobil($data){
             $q = $this->db->insert('ms_mobil',$data);
@@ -75,8 +91,11 @@
             if($q) return true; else return false;
         }
 
-        public function ubahStatus(){
-
+        /* Transaksi */
+        public function ubahStatus($id,$data){
+            $cond = array('ID_Rental' => $id);
+            $q = $this->db->update('tr_rental',$data, $cond);
+            if($q) return true; else return false;
         }
     }
 ?>

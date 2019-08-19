@@ -1,4 +1,7 @@
 $(function(){
+    $("img").on("error",function(){
+      $(this).attr("src", "<?= base_url('media/nopic.jpg') ?>");
+    });
     $('.editor').summernote({
         height: 200,
         disableResizeEditor: true
