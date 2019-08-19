@@ -29,7 +29,7 @@
   <script src="<?= base_url('js/sb-admin-2.js') ?>"></script>
   <style>
     body{
-      background-image: url('../media/logo.png');
+      background-image: url('./media/logo.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
