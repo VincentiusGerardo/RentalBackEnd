@@ -1,0 +1,24 @@
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../media/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.peringatan{
+    text-align: center;
+}
+
+.tables{
+    margin-top:5px;
+}
+
+.textTengah{
+    text-align: center;
+}
+
+.imageModal{
+    width: 100%;
+}
